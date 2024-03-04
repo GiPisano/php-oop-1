@@ -24,6 +24,8 @@ require_once __DIR__ . "/db/db.php";
                 <th scope="col">Title</th>
                 <th scope="col">Language</th>
                 <th scope="col">Vote</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Description</th>
             </thead>
             <tbody>
                 <?php foreach($productions as $production): ?>
@@ -36,6 +38,12 @@ require_once __DIR__ . "/db/db.php";
                 </td>
                 <td>
                     <?= $production->vote ?>
+                </td>
+                <td>
+                    <?= $production->genre->genre ?>
+                </td>
+                <td>
+                    <?= $production->genre->description ?>
                 </td>
                 </tr>
                 <?php endforeach; ?>
