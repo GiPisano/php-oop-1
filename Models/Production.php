@@ -17,8 +17,7 @@ class Production
         $this->vote = transformVoteToInteger($vote);
 
     }
-
-    
+ 
 }
 
  function transformVoteToInteger(float $num): int {
