@@ -6,7 +6,7 @@ require_once __DIR__ . "/db/db.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,9 @@ require_once __DIR__ . "/db/db.php";
 <body>
     <div class="container">
         <h1 class="text-center m-5">PHP OOP</h1>
-        <table class="table table-dark table-hover">
-            <thead>
+        <div class="card p-3">
+        <table class="table table-hover">
+            <thead class="text-center">
                 <th scope="col">Title</th>
                 <th scope="col">Language</th>
                 <th scope="col">Vote</th>
@@ -49,6 +50,7 @@ require_once __DIR__ . "/db/db.php";
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
     </div>
 </body>
 </html>
