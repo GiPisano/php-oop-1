@@ -1,12 +1,13 @@
 <?php
 
-// require_once __DIR__ . "/genre.php";
+// require_once __DIR__ . "/Genre.php";
+// require_once __DIR__ . "/Movie.php";
+// require_once __DIR__ . "/TVSerie.php";
 class Production
 {
     public $title;
     public $language;
     public $vote;
-
     public $genre;
 
     function __construct(

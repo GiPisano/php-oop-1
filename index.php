@@ -27,6 +27,9 @@ require_once __DIR__ . "/db/db.php";
                 <th scope="col">Vote</th>
                 <th scope="col">Genre</th>
                 <th scope="col">Description</th>
+                <th scope="col">Seasons</th>
+                <th scope="col">profits</th>
+                <th scope="col">duration</th>
             </thead>
             <tbody>
                 <?php foreach($productions as $production): ?>
@@ -41,11 +44,23 @@ require_once __DIR__ . "/db/db.php";
                     <?= $production->vote ?>
                 </td>
                 <td>
-                    <?= $production->genre->genre ?>
+                <?php foreach ($production->genre->genres as $genre): ?>
+                    <?= $genre ?>
+                <?php endforeach; ?>
                 </td>
                 <td>
                     <?= $production->genre->description ?>
                 </td>
+                <?php if ($production instanceof Movie): ?>
+                <td></td>
+                <td><?= $production->profits ?></td>
+                <td><?= $production->duration ?></td>
+   
+            <?php elseif ($production instanceof TVSerie): ?>
+                <td><?= $production->season ?></td>
+                <td></td>
+                <td></td>
+            <?php endif; ?>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

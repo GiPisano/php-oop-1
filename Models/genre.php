@@ -1,17 +1,17 @@
-
 <?php
 
-class genre
+require_once __DIR__ . "/Production.php";
+class Genre
 {
-    public $genre;
+    public $genres;
     public $description;
 
 
     function __construct(
-        string $genre,
+        array $genres,
         string $description,
     ){
-        $this->genre = $genre;
+        $this->genres = $genres;
         $this->description = $description;
     }
  
